@@ -2,6 +2,7 @@ import logging, os, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
+from config import EDGE_DRIVER_PATH
 
 # Setup folders
 os.makedirs("logs", exist_ok=True)
@@ -11,7 +12,7 @@ logging.basicConfig(filename="logs/test_add_to_cart_ui.log", level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Start Edge
-service = Service("C:/test-by-me/msedgedriver.exe")
+service = Service(EDGE_DRIVER_PATH)
 driver = webdriver.Edge(service=service)
 driver.get("https://www.saucedemo.com")
 logging.info("Opened SauceDemo site for Add to Cart UI test")

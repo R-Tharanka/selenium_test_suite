@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 from datetime import datetime
+from config import EDGE_DRIVER_PATH
 
 # Setup folders
 os.makedirs("logs", exist_ok=True)
@@ -16,7 +17,7 @@ logging.basicConfig(
 )
 
 # Setup EdgeDriver
-edge_service = Service("C:/test-by-me/msedgedriver.exe")
+edge_service = Service(EDGE_DRIVER_PATH)
 driver = webdriver.Edge(service=edge_service)
 
 try:

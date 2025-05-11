@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.edge.service import Service
 import time
 import os
+from config import EDGE_DRIVER_PATH
 
 # Setup logging
 log_dir = "logs"
@@ -18,7 +19,7 @@ logging.basicConfig(
 )
 
 # Launch browser
-service = Service("C:/test-by-me/msedgedriver.exe")
+service = Service(EDGE_DRIVER_PATH)
 driver = webdriver.Edge(service=service)
 driver.get("https://www.saucedemo.com")
 logging.info("Opened SauceDemo site")
