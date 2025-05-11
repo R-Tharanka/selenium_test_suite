@@ -5,7 +5,7 @@ This project contains a suite of automated tests for the [SauceDemo](https://www
 ## Project Structure
 
 ```
-automate_testing/
+selenium_test_suite/
 ├── config.py                # Configuration file for test settings
 ├── test_add_to_cart_ui.py   # Test for adding items to the cart
 ├── test_invalid_password.py # Test for invalid password login
