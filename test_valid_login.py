@@ -1,7 +1,7 @@
 import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.edge.service import Service
 import time
 import os
 
@@ -18,7 +18,8 @@ logging.basicConfig(
 )
 
 # Launch browser
-driver = webdriver.Chrome(service=Service("C:/SeleniumDrivers/chromedriver.exe"))
+service = Service("C:/test-by-me/msedgedriver.exe")
+driver = webdriver.Edge(service=service)
 driver.get("https://www.saucedemo.com")
 logging.info("Opened SauceDemo site")
 

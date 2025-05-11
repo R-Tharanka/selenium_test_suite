@@ -1,7 +1,7 @@
 import logging, os, time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.edge.service import Service
 
 os.makedirs("logs", exist_ok=True)
 os.makedirs("screenshots", exist_ok=True)
@@ -9,7 +9,8 @@ os.makedirs("screenshots", exist_ok=True)
 logging.basicConfig(filename="logs/test_invalid_password.log", level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s")
 
-driver = webdriver.Chrome(service=Service("C:/SeleniumDrivers/chromedriver.exe"))
+service = Service("C:/test-by-me/msedgedriver.exe")
+driver = webdriver.Edge(service=service)
 driver.get("https://www.saucedemo.com")
 logging.info("Opened site for invalid password test")
 
